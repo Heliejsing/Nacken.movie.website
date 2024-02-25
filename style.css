@@ -1,1 +1,375 @@
 
+body {
+    margin: 0px;
+    background-color: #1f1f20;
+}
+
+@media (min-width: 600px) {}
+    .layout1 {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas:
+        'nav nav nav'
+        'one one one'
+        'two two two'
+        'three three three'
+        'four four four'
+        'five five five'
+    }
+
+    .layout2 {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+        'nav nav nav'
+        'one two two'
+        'three three three'
+        'four four four'
+        'five six seven'
+        'eight nine ten'
+    }
+
+    .footer {
+        margin-top: auto; 
+        background-color: red; 
+        color: white; 
+        text-align: center; 
+        padding: 20px; 
+    }
+
+
+@media (max-width: 600px) {
+    .layout1 {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(6,auto);
+        grid-template-areas:
+        'nav'
+        'one'
+        'two'
+        'three'
+        'four'
+        'five'
+    }
+
+    .layout2 {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(11,auto);
+        grid-template-areas:
+        'nav'
+        'one'
+        'two'
+        'three'
+        'four'
+        'five'
+        'six'
+        'seven'
+        'eight'
+        'nine'
+        'ten'
+    }
+
+    .footer {
+        margin-top: auto; 
+        background-color: red; 
+        color: white; 
+        text-align: center; 
+        padding: 10px; 
+    }
+}
+
+/* Navigation + lägga till ul och li */
+.nav {
+    grid-area: nav;
+    background-color: #811010;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f7f0f0;
+    text-transform: none;
+    transition: 0.25s ease;
+}
+
+nav:hover a:hover {
+    color: #f7f0f0;
+    text-shadow:
+    0 0 7px #F7F0F0,
+    0 0 15px #F7F0F0,
+    0 0 25px #F7F0F0,
+    0 0 42px #F7F0F0,
+    0 0 82px #F7F0F0,
+    0 0 92px #F7F0F0,
+    0 0 110px #F7F0F0,
+    0 0 130px #F7F0F0;
+}
+
+.li {
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    display: flex;
+}
+
+.ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+/* Index sidan */
+/* Slideshow */
+.slideshow {
+    grid-area: one;
+}
+
+.mySlides { 
+    height: 500px; 
+    overflow: hidden;
+}
+  
+.mySlides img {
+    width: 100%;
+    height: auto;
+    max-width: 100%; 
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%; /* Centrera vertikalt */
+    transform: translateY(-300%); 
+    width: auto;
+    padding: 16px;
+    color: #f7f0f0;;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    z-index: 1; 
+}
+
+.prev {
+    left: 0px;
+    border-radius: 3px 0 0 3px;
+}
+      
+.next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+      
+.prev:hover, .next:hover {
+    background-color: rgba(31, 29, 32, 0.8);
+}
+
+.intro {
+    grid-area: two;
+    background-color: #1f1f20;
+    color: white;
+}
+
+.poster {
+    grid-area: three;
+    background-color: #1f1f20;
+    text-align: center;
+}
+
+.img {
+    width: 400px;
+}
+
+.biljettknapp {
+    grid-area: five;
+    background-color: #1f1f20;
+    color: white;
+}
+
+/* Biljettsidan */
+/* Countdown */
+.countdown-container {
+    grid-area: one;
+    color: white;
+    text-align: center;
+}
+
+.countdown {
+    display: flex; 
+    justify-content: space-around; 
+    text-align: center; 
+    margin-bottom: 40%;
+}
+
+.day, 
+.hour, 
+.minute, 
+.second { 
+    font-size: 3rem; 
+} 
+
+.waiting { 
+    height: 50vh; 
+} 
+
+.filminfo {
+    grid-area: two;
+    background-color: #1f1f20;
+    color: white;
+}
+
+/* Använder samma class som .poster för postern */
+.button {
+    grid-area: four;
+    background-color: #1f1f20;
+}
+
+button { /* Kika om detta funkar! Annars style om */
+    margin-top: 20px;
+    background-color: #811010;
+    color: white;
+    padding: 15px 60px;
+    border: none;
+    cursor: pointer;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    font-style: normal;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Formuläret */
+.open-button { /* Knappen till popup-formuläret */
+    margin-top: 20px;
+    background-color: #811010;
+    color: white;
+    padding: 15px 60px;
+    border: none;
+    cursor: pointer;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    font-style: normal;
+    border-radius: 10px;
+}
+
+button:hover { /* När man hover över button */
+    background-color: #f9f9f9;
+    color: #1f1f20;
+    border-radius: 10px;
+}
+
+/* Styling för själva popup-formuläret */
+#popup-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 400px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    z-index: 2;
+    text-align: center;
+}
+
+.form-li {
+    display: block;
+    list-style: none;
+    text-align: left;
+    padding-left: 75px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    font-size: 16px; /* Fixa typsnitt */
+}
+
+.form-ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.tillkontakt {
+    grid-area: five;
+}
+
+/* Handling sidan */
+.affisch {
+    grid-area: one;
+}
+
+.filmtext {
+    grid-area: two;
+}
+
+.cardtitel {
+    grid-area: three;
+}
+
+.cardone { /* Första raden kort */
+    grid-area: seven eight nine;
+}
+
+.cardtwo { /* Andra rade kort */
+    grid-area: ten eleven twelve;
+}
+
+.card { /* Själva korten */
+    position: relative;
+    width: 400px;
+    height: 300px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center; /* This will center the image vertically */
+    justify-content: center; /* This will center the image horizontally */
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Kontaktsidan */
+.kontakttitel {
+    grid-area: one;
+}
+
+.kontakt {
+    grid-area: two;
+}
+
+/* All text-styling */
+
+.titel { /* Titel styling med shadow, används på */
+    text-align: center;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    text-shadow: 
+    0 0 10px #811010, 
+    0 0 20px #811010,
+    0 0 30px #811010, 
+    0 0 40px #811010, 
+    0 0 70px #811010, 
+    0 0 80px #811010, 
+    0 0 100px #811010, 
+    0 0 150px #811010;
+}
+
+p, h1, h2 {
+    text-align: center;
+}
