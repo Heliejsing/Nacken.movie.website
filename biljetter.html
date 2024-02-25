@@ -1,1 +1,172 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+	<title>Biljetter</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap" rel="stylesheet">
+</head>
 
+<body>
+<div class="layout1">
+
+    <!-- Navigation för alla sidor -->
+    <div class="nav"> 
+        <nav>
+            <ul class="ul">
+                <li class="li"><a href="index.html">Hem</a></li>
+                <li class="li"><a href="biljett.html">Biljett</a></li>
+                <li class="li"><a href="handling.html">Handling</a></li>
+                <li class="li"><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="countdown-container">
+        <h2>Countdown Till Biopremiär</h2> 
+        <div class="countdown"> 
+        
+        <div class="container-day"> 
+        <h3 class="day">Time</h3> 
+        <h3>Dagar</h3> 
+        </div> 
+
+        <div class="container-hour"> 
+        <h3 class="hour">Time</h3> 
+        <h3>Timmar</h3>
+        </div> 
+        
+        <div class="container-minute"> 
+        <h3 class="minute">Time</h3>
+        <h3>Minuter</h3> 
+        </div> 
+        
+        <div class="container-second"> 
+        <h3 class="second">Time</h3> 
+        <h3>Sekunder</h3> 
+        </div> 
+  
+        </div> 
+  </div>
+
+  <div class="two">
+      <h2 class="titel">The Symphony of Silence</h2>
+      <p class="beskrivning">Universitetets studenter står inför en uråldrig legend. 
+        När studenterna festar på campus, väcks Näckens mörka kraft till liv. 
+        Näcken, med förmågan att anta vilken students skepnad som helst, 
+        lockar sina offer med en förhäxande symfoni ner i 
+        flodens kalla och mörka vatten. En efter en försvinner studenterna, aldrig att ses igen. 
+        När sanningen om försvinnandena börjar avslöjas, 
+        måste de överlevande studenterna kämpa inte bara för sina liv, 
+        utan också för sitt medvetande under Näckens skrämmande symfoni. 
+        <br><br>Vem kan man lita på när Näcken kan vara vem som helst?</p>
+  </div>
+
+<div class="three">
+ <img src="Affisch.png" alt="">
+</div>
+
+<!-- Resten av filmerna -->
+<div class="four">
+<button class="open-button" id="open-form">Köp biljett</button>
+</div>
+
+<!-- Formulär som visas när knappen klickas på -->
+<div id="popup-form">
+
+<!-- Kryss knapp i högra översta hörnet för att stänga ner formuläret -->
+<span id="close-button" onclick="closeForm()">&times;</span>
+<h2 class="h2">Biljettköp</h2>
+
+<!-- Själva formuläret -->
+<form action="#" method="post"><form>
+<ul class="form-ul">
+<li class="form-li">
+  <label for="namn">Namn:</label>
+  <input type="text" id="namn" name="user_name" />
+</li>
+
+<li class="form-li">
+  <label for="efternamn">Efternamn:</label>
+  <input type="text" id="efternamn" name="user_name" />
+</li>
+
+<li class="form-li">
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email">
+</li>
+
+<li class="form-li">
+  <label for="quantity">Antal:</label>
+  <input type="number" id="quantity" name="quantity" min="1" max="10" step="1">
+</li>
+
+<li class="form-li">
+  <label for="datum">Välj ett datum:</label>
+  <select id="datum" onchange="showTider()">
+  <option value="" disabled selected>---</option>
+  <option value="18-juni">18 juni</option>
+  <option value="19-juni">19 juni</option>
+  <option value="20-juni">20 juni</option>
+  <option value="21-juni">21 juni</option>
+  </select>
+  <br>
+ </li>
+
+ <li class="form-li">
+  <label for="tid">Välj en tid:</label>
+  <select id="tid">
+
+     <!-- Tider för 18 juni -->
+    <optgroup label="18 juni">
+      <option value="15.00">15.00</option>
+      <option value="17.30">17.30</option>
+      <option value="20.00">20.00</option>
+      <option value="21.30">21.30</option>
+    </optgroup>
+
+     <!-- Tider för 19 juni -->
+     <optgroup label="19 juni">
+      <option value="13.00">13.00</option>
+      <option value="15.30">15.30</option>
+      <option value="18.00">18.00</option>
+      <option value="20.30">20.30</option>
+    </optgroup>
+
+     <!-- Tider för 20 juni -->
+     <optgroup label="20 juni">
+      <option value="13.00">13.00</option>
+      <option value="17.30">17.30</option>
+      <option value="19.30">19.30</option>
+      <option value="21.30">21.30</option>
+    </optgroup>
+
+     <!-- Tider för 21 juni -->
+     <optgroup label="21 juni">
+      <option value="15.00">15.00</option>
+      <option value="17.30">17.30</option>
+      <option value="19.30">19.30</option>
+    </optgroup>
+  </li>
+
+  </select>
+
+<li class="form-li">
+  <input type="submit" id="submit-button" value="Slutför biljettköp">
+</li>
+
+</ul>
+</div>
+
+<div class="five">
+<p class="p">Vid frågor gällande filmvisning eller biljetter -<a href="kontakt.html"> kontakta oss!</a></p>
+</div>
+
+<div class="footer">
+<p>	&copy; Norcopia Pictures</p>
+</div>
+
+</div>
+  <script src="scripts.js"></script>
+</html>
