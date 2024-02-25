@@ -31,14 +31,6 @@ body {
         'eight nine ten'
     }
 
-    .footer {
-        margin-top: auto; 
-        background-color: red; 
-        color: white; 
-        text-align: center; 
-        padding: 20px; 
-    }
-
 
 @media (max-width: 1200px) {
     .layout1 {
@@ -70,14 +62,6 @@ body {
         'eight'
         'nine'
         'ten'
-    }
-
-    .footer {
-        margin-top: auto; 
-        background-color: red; 
-        color: white; 
-        text-align: center; 
-        padding: 10px; 
     }
 }
 
