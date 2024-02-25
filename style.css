@@ -4,7 +4,7 @@ body {
     background-color: #1f1f20;
 }
 
-@media (min-width: 600px) {}
+@media (min-width: 1200px) {}
     .layout1 {
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
@@ -40,7 +40,7 @@ body {
     }
 
 
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
     .layout1 {
         display: grid;
         grid-template-columns: auto;
