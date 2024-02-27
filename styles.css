@@ -1,1 +1,297 @@
 
+
+body {
+    margin: 0px;
+}
+
+.layout {
+    display: grid; 
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 70px 300px 450px 650px 100px 100px 70px;
+    grid-template-areas:
+    'nav nav nav'
+    'one one one'
+    'two two two'
+    'three three three'
+    'four four four'
+    'five five five'
+    'footer footer footer';
+}
+
+/* Navigation */
+.nav { 
+    background-color: #811010;
+    grid-area: nav;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}  
+
+nav a {
+    text-decoration: none;
+    color: #f7f0f0;
+    text-transform: none;
+    transition: 0.25s ease;
+}
+
+.li {
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+.ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav:hover a {
+    color: #f7f0f0;
+}
+
+nav:hover a:hover {
+    color: #f7f0f0;
+    text-shadow:
+    0 0 7px #F7F0F0,
+    0 0 15px #F7F0F0,
+    0 0 25px #F7F0F0,
+    0 0 42px #F7F0F0,
+    0 0 82px #F7F0F0,
+    0 0 92px #F7F0F0,
+    0 0 110px #F7F0F0,
+    0 0 130px #F7F0F0;
+}
+
+/* Countdown */
+.one {
+    grid-area: one;
+    background-color: #1f1d20;
+    color: #f7f0f0;
+}
+
+.countdown { 
+    display: flex; 
+    justify-content: space-around; 
+    text-align: center; 
+    margin-bottom: 40%; 
+} 
+        
+.day, 
+.hour, 
+.minute, 
+.second { 
+    font-size: 3rem; 
+} 
+        
+.waiting { 
+    height: 50vh; 
+} 
+
+/* All typ av text */
+h2 {
+    text-align: center;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+}
+
+h3 {
+    color: #F7F0F0;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    margin-top: 8px;
+}
+
+p {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #F7F0F0;
+    text-align: center;
+}
+
+.beskrivning {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #F7F0F0;
+    text-align: center;
+    line-height: 30px;
+}
+
+.titel {
+    text-align: center;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    text-shadow: 
+    0 0 10px #811010, 
+    0 0 20px #811010,
+    0 0 30px #811010, 
+    0 0 40px #811010, 
+    0 0 70px #811010, 
+    0 0 80px #811010, 
+    0 0 100px #811010, 
+    0 0 150px #811010;
+}
+
+/* Film-storlek */
+img {
+    height: 600px;
+    width: 500px;
+    margin-top: 20px;
+}
+
+/* Filmposter */
+.two {
+    grid-area: two;
+    background-color: #1f1f20;
+    text-align: center;
+    color: white;
+}
+
+/* Boka biljett */
+.three {
+    grid-area: three;
+    background-color: #1f1f20;
+    text-align: center;
+}
+
+/* Knappen och det till forms */
+.open-button {
+    margin-top: 20px;
+    background-color: #811010;
+    color: white;
+    padding: 15px 60px;
+    border: none;
+    cursor: pointer;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    font-style: normal;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #f9f9f9;
+    color: #1f1f20;
+    border-radius: 10px;
+}
+/* Styling för själva popup-formuläret */
+#popup-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 400px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    z-index: 2;
+    text-align: center;
+}
+
+
+.form-li {
+    display: block;
+    list-style: none;
+    text-align: left;
+    padding-left: 75px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    font-family: "Yantramanav", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.form-ul {
+    list-style-type: none;
+    text-align: center;
+    font-family: "Yantramanav", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.h2 {
+    padding-top: 5px;
+    text-align: center;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+}
+
+/* Styling för stäng-knappen (X) */
+#close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #1f1f20;
+}
+
+/* Styling för avsluta-knappen */
+#submit-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #69008F;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Strömmen titel */
+.four {
+    grid-area: four;
+    background-color: #1f1f20;
+    text-align: center;
+}
+
+.five {
+    grid-area: five;
+    background-color: #1f1f20;
+    align-items: center;
+}
+
+.p {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 20px;
+    color: #F7F0F0;
+    text-align: center;
+}
+/* Footer */
+.footer {
+    grid-area: footer;
+    background-color: #811010;
+    color: white;
+}
