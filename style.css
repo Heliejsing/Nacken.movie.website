@@ -357,3 +357,633 @@ button:hover { /* När man hover över button */
 p, h1, h2 {
     text-align: center;
 }
+
+
+
+
+
+
+
+HELENAS NYA: 
+@charset "UTF-8";
+/* CSS Document */
+
+#layout { 
+    min-width: 100%;
+    background-color: #1F1D20;
+    min-height: 100%;
+    overflow-x: hidden;
+    justify-items: center;
+    align-items: center;
+    display: grid;
+    grid-auto-flow: dense rows;
+    grid-template-rows: 70px 600px 300px 350px 350px 350px 70px; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-areas:
+    "header header header"
+    "affisch text text"
+    "line line line" 
+    "card1 card2 card3"
+    "card4 card5 card6"
+    "footer footer footer"; }
+#header { 
+    grid-area: header;
+    width: 100%;
+    background-color: #811010;
+        /* Navigation */ 
+    
+        .nav {  
+    
+        background-color: #811010; 
+    
+        grid-area: nav; 
+    
+        font-family: "IM Fell Double Pica SC", serif; 
+    
+        font-weight: 400; 
+    
+        font-style: normal; 
+    
+        font-size: 20px; 
+    
+    }   
+    
+     
+    
+    nav a { 
+    
+        text-decoration: none; 
+    
+        color: #f7f0f0; 
+    
+        text-transform: none; 
+    
+        transition: 0.25s ease; 
+    
+    } 
+    
+     
+    
+    .li { 
+    
+        list-style: none; 
+    
+        padding-left: 10px; 
+    
+        padding-right: 10px; 
+    
+        padding-top: 5px; 
+    
+    } 
+    
+     
+    
+    .ul { 
+    
+        display: flex; 
+    
+        list-style: none; 
+    
+        align-items: center; 
+    
+    } 
+    
+     
+    
+    nav:hover a { 
+    
+        color: #f7f0f0; 
+    
+    } 
+    
+     
+    
+    nav:hover a:hover { 
+    
+        color: #f7f0f0; 
+    
+        text-shadow: 
+    
+        0 0 7px #F7F0F0, 
+    
+        0 0 15px #F7F0F0, 
+    
+        0 0 25px #F7F0F0, 
+    
+        0 0 42px #F7F0F0, 
+    
+        0 0 82px #F7F0F0, 
+    
+        0 0 92px #F7F0F0, 
+    
+        0 0 110px #F7F0F0, 
+    
+        0 0 130px #F7F0F0; 
+    
+    } 
+    }
+    #affisch { 
+        grid-area: affisch;
+        background-color: #1F1D20;
+        img { 
+            height: 500px ;
+            justify-content: left;
+            padding: 20px;
+        }
+    }
+    #text{ 
+        grid-area: text;
+        padding: 40px;
+        color: #F7F0F0;
+    
+    }
+    #line { 
+        grid-area: line;
+        justify-content: center;
+        color: #F7F0F0;
+        font-size: 50px;
+    }
+    #card1 { 
+        grid-area: card1;
+        .card {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            display: flex;
+            align-items: center; /* This will center the image vertically */
+            justify-content: center; /* This will center the image horizontally */
+            overflow: hidden;
+            perspective: 1000px;
+            box-shadow: 0 0 0 5px #ffffff80;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+          
+          .card img {
+            width: 380px;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          }
+          .card img {
+            width: 500px;
+            padding-right: 50px;
+            padding-top:0px ;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 1; /* This will place the image above the card content */
+        }
+        
+        .card__content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f2f2f2;
+            transform: rotateX(-90deg);
+            transform-origin: bottom;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 2; /* This will place the card content above the image */
+        }
+          .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+          }
+          
+          .card:hover .card__content {
+            transform: rotateX(0deg);
+          }
+          
+          .card__title {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+            font-weight: 700;
+          }
+          
+          .card:hover svg {
+            scale: 0;
+          }
+          
+          .card__description {
+            margin: 10px 0 0;
+            font-size: 14px;
+            color: #777;
+            line-height: 1.4;
+          }
+    }
+    #card2 { 
+        grid-area: card2;
+        .card {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            display: flex;
+            align-items: center; /* This will center the image vertically */
+            justify-content: center; /* This will center the image horizontally */
+            overflow: hidden;
+            perspective: 1000px;
+            box-shadow: 0 0 0 5px #ffffff80;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+          
+          .card img {
+            width: 380px;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          }
+          .card img {
+            width: 500px;
+            padding-right: 50px;
+            padding-top:0px ;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 1; /* This will place the image above the card content */
+        }
+        
+        .card__content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f2f2f2;
+            transform: rotateX(-90deg);
+            transform-origin: bottom;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 2; /* This will place the card content above the image */
+        }
+          .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+          }
+          
+          .card:hover .card__content {
+            transform: rotateX(0deg);
+          }
+          
+          .card__title {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+            font-weight: 700;
+          }
+          
+          .card:hover svg {
+            scale: 0;
+          }
+          
+          .card__description {
+            margin: 10px 0 0;
+            font-size: 14px;
+            color: #777;
+            line-height: 1.4;
+          }
+    }
+    #card3 { 
+        grid-area: card3;
+        .card {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            display: flex;
+            align-items: center; /* This will center the image vertically */
+            justify-content: center; /* This will center the image horizontally */
+            overflow: hidden;
+            perspective: 1000px;
+            box-shadow: 0 0 0 5px #ffffff80;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+          
+          .card img {
+            width: 380px;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          }
+          .card img {
+            width: 500px;
+            padding-right: 50px;
+            padding-top:0px ;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 1; /* This will place the image above the card content */
+        }
+        
+        .card__content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f2f2f2;
+            transform: rotateX(-90deg);
+            transform-origin: bottom;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 2; /* This will place the card content above the image */
+        }
+          .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+          }
+          
+          .card:hover .card__content {
+            transform: rotateX(0deg);
+          }
+          
+          .card__title {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+            font-weight: 700;
+          }
+          
+          .card:hover svg {
+            scale: 0;
+          }
+          
+          .card__description {
+            margin: 10px 0 0;
+            font-size: 14px;
+            color: #777;
+            line-height: 1.4;
+          }
+    }
+    #card4 { 
+        grid-area: card4;
+        .card {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            display: flex;
+            align-items: center; /* This will center the image vertically */
+            justify-content: center; /* This will center the image horizontally */
+            overflow: hidden;
+            perspective: 1000px;
+            box-shadow: 0 0 0 5px #ffffff80;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+          
+          .card img {
+            width: 380px;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          }
+          .card img {
+            width: 500px;
+            padding-right: 50px;
+            padding-top:0px ;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 1; /* This will place the image above the card content */
+        }
+        
+        .card__content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f2f2f2;
+            transform: rotateX(-90deg);
+            transform-origin: bottom;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 2; /* This will place the card content above the image */
+        }
+          .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+          }
+          
+          .card:hover .card__content {
+            transform: rotateX(0deg);
+          }
+          
+          .card__title {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+            font-weight: 700;
+          }
+          
+          .card:hover svg {
+            scale: 0;
+          }
+          
+          .card__description {
+            margin: 10px 0 0;
+            font-size: 14px;
+            color: #777;
+            line-height: 1.4;
+          }
+    }
+    #card5 { 
+        grid-area: card5;
+        .card {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            display: flex;
+            align-items: center; /* This will center the image vertically */
+            justify-content: center; /* This will center the image horizontally */
+            overflow: hidden;
+            perspective: 1000px;
+            box-shadow: 0 0 0 5px #ffffff80;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+          
+          .card img {
+            width: 380px;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          }
+          .card img {
+            width: 500px;
+            padding-right: 50px;
+            padding-top:0px ;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 1; /* This will place the image above the card content */
+        }
+        
+        .card__content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f2f2f2;
+            transform: rotateX(-90deg);
+            transform-origin: bottom;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 2; /* This will place the card content above the image */
+        }
+          .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+          }
+          
+          .card:hover .card__content {
+            transform: rotateX(0deg);
+          }
+          
+          .card__title {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+            font-weight: 700;
+          }
+          
+          .card:hover svg {
+            scale: 0;
+          }
+          
+          .card__description {
+            margin: 10px 0 0;
+            font-size: 14px;
+            color: #777;
+            line-height: 1.4;
+          }
+    }
+    #card6 { 
+        grid-area: card6;
+        .card {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            display: flex;
+            align-items: center; /* This will center the image vertically */
+            justify-content: center; /* This will center the image horizontally */
+            overflow: hidden;
+            perspective: 1000px;
+            box-shadow: 0 0 0 5px #ffffff80;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+          
+          .card img {
+            width: 380px;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          }
+          .card img {
+            width: 500px;
+            padding-right: 50px;
+            padding-top:0px ;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 1; /* This will place the image above the card content */
+        }
+        
+        .card__content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f2f2f2;
+            transform: rotateX(-90deg);
+            transform-origin: bottom;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 2; /* This will place the card content above the image */
+        }
+          .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+          }
+          
+          .card:hover .card__content {
+            transform: rotateX(0deg);
+          }
+          
+          .card__title {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+            font-weight: 700;
+          }
+          
+          .card:hover svg {
+            scale: 0;
+          }
+          
+          .card__description {
+            margin: 10px 0 0;
+            font-size: 14px;
+            color: #777;
+            line-height: 1.4;
+          }
+    }
+    #footer{ 
+        grid-area: footer;
+        width: 100%;
+        background-color: #811010;
+        .footer { 
+    
+            grid-area: footer; 
+        
+            background-color: #811010; 
+        
+            color: white; 
+        
+        } 
+        
+         
+        
+        p { 
+        
+            padding-left: 20px; 
+        
+            padding-right: 20px; 
+        
+            font-family: "IM Fell Double Pica SC", serif; 
+        
+            font-weight: 400; 
+        
+            font-style: normal; 
+        
+            font-size: 20px; 
+        
+            color: #F7F0F0; 
+        
+            text-align: center; 
+        
+        } 
+    }
+@media (max-width: 1200px) {
+#layout {
+        width: 100%;
+        grid-template-rows: 70px 600px auto repeat(7, 350px) 70px; /* Changed 300px to auto */
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "affisch"
+            "text"
+            "line"
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6"
+            "footer";
+}
+#affisch, #text, #card1, #card2, #card3, #card4, #card5, #card6 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; /* Add this to allow the items to wrap if they can't fit */
+}} 
+
+.body{ 
+    background-color: #1F1D20;
+}
