@@ -628,17 +628,16 @@ body {
       }
 }
 #footer{ 
-    grid-area: footer;
     width: 100%;
     background-color: #811010;
     .footer { 
-
-        grid-area: footer; 
-    
-        background-color: #811010; 
-    
-        color: white; 
-    
+    grid-area: footer;
+    text-align: center;
+    background-color: #811010;
+    color:#F7F0F0;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
     } 
     
      
@@ -742,6 +741,8 @@ button:hover {
     font-size: 16px;
     cursor: pointer;
 }
+
+
 
 
 @media (max-width: 1200px) {
