@@ -1,6 +1,5 @@
 body {
     margin: 0;
-     background-color: #1f1d20;
 }
 
 .layout2 {
@@ -25,7 +24,7 @@ body {
     align-items: center;
     display: grid;
     grid-auto-flow: dense rows;
-    grid-template-rows: 70px 600px 300px 350px 350px 350px 70px; 
+    grid-template-rows: 70px 600px 300px 350px 350px 70px; 
     grid-template-columns: 1fr 1fr 1fr; 
     grid-template-areas:
     "header header header"
@@ -629,10 +628,9 @@ body {
       }
 }
 #footer{ 
+    grid-area: footer;
     width: 100%;
     background-color: #811010;
-    .footer { 
-    grid-area: footer;
     text-align: center;
     background-color: #811010;
     color:#F7F0F0;
@@ -640,10 +638,7 @@ body {
     font-weight: 400;
     font-style: normal;
     } 
-    
-     
-    
-    p { 
+p { 
     
         padding-left: 20px; 
     
@@ -662,7 +657,6 @@ body {
         text-align: center; 
     
     } 
-}
 /* Knappen och det till forms */
 .open-button {
     margin-top: 20px;
@@ -682,6 +676,7 @@ button:hover {
     background-color: #f9f9f9;
     color: #1f1f20;
     border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
 /* Styling för själva popup-formuläret */
 #popup-form {
@@ -742,9 +737,23 @@ button:hover {
     font-size: 16px;
     cursor: pointer;
 }
-
-
-
+p a {
+    text-decoration: none;
+    color: white;
+    text-shadow:
+    0 0 20px white;
+}
+p:hover a {
+    text-shadow: 
+    0 0 10px #811010, 
+    0 0 20px #811010,
+    0 0 30px #811010, 
+    0 0 40px #811010, 
+    0 0 70px #811010, 
+    0 0 80px #811010, 
+    0 0 100px #811010, 
+    0 0 150px #811010;
+}
 
 @media (max-width: 1200px) {
 .layout2 { 
@@ -784,11 +793,6 @@ button:hover {
             flex-wrap: wrap; /* Add this to allow the items to wrap if they can't fit */
     }} 
     
-
-
-
-
-
 
 
 /* All typ av text */
@@ -848,3 +852,4 @@ p {
     0 0 100px #811010, 
     0 0 150px #811010;
 }
+
