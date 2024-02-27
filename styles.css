@@ -460,3 +460,26 @@ grid-area: slideshow;
     font-weight: 400;
     font-style: normal;
   }
+
+ .biljettbutton {
+    margin-top: 20px;
+       background-color: #811010;
+       color: white;
+       padding: 15px 60px;
+       border: none;
+       cursor: pointer;
+       font-family: "IM Fell Double Pica SC", serif;
+       font-weight: 400;
+       font-style: normal;
+       font-size: 25px;
+       font-style: normal;
+       border-radius: 10px;
+       text-decoration: none;
+   }
+   
+   .biljettbutton:hover {
+       background-color: #f9f9f9;
+       color: #1f1f20;
+       border-radius: 10px;
+       transition: background-color 0.3s ease;
+   }
