@@ -5,8 +5,7 @@ body {
 .layout2 {
     display: grid; 
     grid-template-columns: 1fr 2fr 1fr;
-    overflow-x: hidden;
-    grid-template-rows: 70px 300px 450px 650px 100px 100px 70px;
+    grid-template-rows: 70px 300px auto auto 100px auto 70px;
     grid-template-areas:
     'header header header'
     'one one one'
@@ -48,12 +47,22 @@ body {
     background-color: #1f1f20;
     text-align: center;
     color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    
 }
 /* Boka biljett */
 .three {
     grid-area: three;
     background-color: #1f1f20;
     text-align: center;
+
+    img { 
+        width: 500px ;
+        padding: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 }
 /* Strömmen titel */
 .four {
