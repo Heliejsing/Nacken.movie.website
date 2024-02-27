@@ -295,3 +295,168 @@ button:hover {
     background-color: #811010;
     color: white;
 }
+
+
+ELLENS CSS
+
+@charset "UTF-8";
+
+body {
+    margin:0;
+    background-color: #1f1d20;
+}
+
+.layout1 {
+    display: grid; 
+    grid-template-columns: 1fr 2fr 1fr;
+    overflow-x: hidden;
+    grid-template-rows: 70px repeat(4, auto) 70px;
+    grid-template-areas:
+    'header header header'
+    'slideshow slideshow slideshow'
+    'intro intro intro'
+    'poster poster poster'
+    'biljettknapp biljettknapp biljettknapp'
+    'footer footer footer';
+}
+
+#header { 
+    grid-area: header;
+    width: 100%;
+    background-color: #811010;
+        /* Navigation */ 
+    
+        .nav {  
+        background-color: #811010; 
+        grid-area: nav; 
+        font-family: "IM Fell Double Pica SC", serif; 
+        font-weight: 400; 
+        font-style: normal; 
+        font-size: 20px; 
+    }   
+    
+     
+    
+    nav a { 
+        text-decoration: none; 
+        color: #f7f0f0; 
+        text-transform: none; 
+        transition: 0.25s ease; 
+    } 
+    
+     
+    
+    .li { 
+        list-style: none; 
+        padding-left: 10px; 
+        padding-right: 10px; 
+        padding-top: 5px; 
+    } 
+    
+     
+    
+    .ul { 
+        display: flex; 
+        list-style: none;
+        align-items: center; 
+    } 
+    
+     
+    
+    nav:hover a { 
+        color: #f7f0f0; 
+    } 
+    
+    nav:hover a:hover { 
+        color: #f7f0f0; 
+        text-shadow: 
+        0 0 7px #F7F0F0, 
+        0 0 15px #F7F0F0, 
+        0 0 25px #F7F0F0, 
+        0 0 42px #F7F0F0, 
+        0 0 82px #F7F0F0, 
+        0 0 92px #F7F0F0, 
+        0 0 110px #F7F0F0, 
+        0 0 130px #F7F0F0; 
+    } 
+    }
+
+/* Slideshow */
+.slideshow {
+grid-area: slideshow;
+}
+
+.slideshow-container {
+    max-width: 100%;
+     position: relative;
+     margin: auto;
+     
+ }  
+
+/* Gör bilderna responsiva */
+  .mySlides img {
+    width: 100%;
+  }
+  
+  /* Nästa och föregående knappar */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Positionera "nästa knapp" till höger */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* Vid hovring, lägg till en svart bakgrund med lite genomskinlighet */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .intro {
+    grid-area: intro;
+    text-align: center;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #f7f0f0;
+  }
+
+  .poster {
+    grid-area: poster;
+    display: flex;
+    justify-content: center;
+  }
+
+  .biljettknapp {
+    grid-area: biljettknapp;
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .footer {
+    grid-area: footer;
+    text-align: center;
+    background-color: #811010;
+    color:#F7F0F0;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
