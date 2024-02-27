@@ -1,374 +1,22 @@
-
 body {
-    margin: 0px;
-    background-color: #1f1f20;
+    margin: 0;
 }
 
-@media (min-width: 1200px) {}
-    .layout1 {
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-template-rows: repeat(6, auto);
-        grid-template-areas:
-        'nav nav nav'
-        'one one one'
-        'two two two'
-        'three three three'
-        'four four four'
-        'five five five'
-    }
-
-    .layout2 {
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-template-rows: repeat(5, auto);
-        grid-template-areas:
-        'nav nav nav'
-        'one two two'
-        'three three three'
-        'four four four'
-        'five six seven'
-        'eight nine ten'
-    }
-
-
-@media (max-width: 1200px) {
-    .layout1 {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: repeat(6,auto);
-        grid-template-areas:
-        'nav'
-        'one'
-        'two'
-        'three'
-        'four'
-        'five'
-    }
-
-    .layout2 {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: repeat(11,auto);
-        grid-template-areas:
-        'nav'
-        'one'
-        'two'
-        'three'
-        'four'
-        'five'
-        'six'
-        'seven'
-        'eight'
-        'nine'
-        'ten'
-    }
+.layout2 {
+    display: grid; 
+    grid-template-columns: 1fr 2fr 1fr;
+    overflow-x: hidden;
+    grid-template-rows: 70px 300px 450px 650px 100px 100px 70px;
+    grid-template-areas:
+    'header header header'
+    'one one one'
+    'two two two'
+    'three three three'
+    'four four four'
+    'five five five'
+    'footer footer footer';
 }
-
-/* Navigation + lägga till ul och li */
-.nav {
-    grid-area: nav;
-    background-color: #811010;
-    font-family: "IM Fell Double Pica SC", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #f7f0f0;
-    text-transform: none;
-    transition: 0.25s ease;
-}
-
-nav:hover a:hover {
-    color: #f7f0f0;
-    text-shadow:
-    0 0 7px #F7F0F0,
-    0 0 15px #F7F0F0,
-    0 0 25px #F7F0F0,
-    0 0 42px #F7F0F0,
-    0 0 82px #F7F0F0,
-    0 0 92px #F7F0F0,
-    0 0 110px #F7F0F0,
-    0 0 130px #F7F0F0;
-}
-
-.li {
-    list-style: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    display: flex;
-}
-
-.ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
-}
-
-/* Index sidan */
-/* Slideshow */
-.slideshow {
-    grid-area: one;
-}
-
-.mySlides { 
-    height: 500px; 
-    overflow: hidden;
-}
-  
-.mySlides img {
-    width: 100%;
-    height: auto;
-    max-width: 100%; 
-}
-
-.prev, .next {
-    position: absolute;
-    top: 50%; /* Centrera vertikalt */
-    transform: translateY(-300%); 
-    width: auto;
-    padding: 16px;
-    color: #f7f0f0;;
-    font-weight: bold;
-    font-size: 20px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    cursor: pointer;
-    z-index: 1; 
-}
-
-.prev {
-    left: 0px;
-    border-radius: 3px 0 0 3px;
-}
-      
-.next {
-    right: 0;
-    border-radius: 0 3px 3px 0;
-}
-      
-.prev:hover, .next:hover {
-    background-color: rgba(31, 29, 32, 0.8);
-}
-
-.intro {
-    grid-area: two;
-    background-color: #1f1f20;
-    color: white;
-}
-
-.poster {
-    grid-area: three;
-    background-color: #1f1f20;
-    text-align: center;
-}
-
-.img {
-    width: 400px;
-}
-
-.biljettknapp {
-    grid-area: five;
-    background-color: #1f1f20;
-    color: white;
-}
-
-/* Biljettsidan */
-/* Countdown */
-.countdown-container {
-    grid-area: one;
-    color: white;
-    text-align: center;
-}
-
-.countdown {
-    display: flex; 
-    justify-content: space-around; 
-    text-align: center; 
-    margin-bottom: 40%;
-}
-
-.day, 
-.hour, 
-.minute, 
-.second { 
-    font-size: 3rem; 
-} 
-
-.waiting { 
-    height: 50vh; 
-} 
-
-.filminfo {
-    grid-area: two;
-    background-color: #1f1f20;
-    color: white;
-}
-
-/* Använder samma class som .poster för postern */
-.button {
-    grid-area: four;
-    background-color: #1f1f20;
-}
-
-button { /* Kika om detta funkar! Annars style om */
-    margin-top: 20px;
-    background-color: #811010;
-    color: white;
-    padding: 15px 60px;
-    border: none;
-    cursor: pointer;
-    font-family: "IM Fell Double Pica SC", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-    font-style: normal;
-    border-radius: 10px;
-    text-align: center;
-    justify-content: center;
-}
-
-/* Formuläret */
-.open-button { /* Knappen till popup-formuläret */
-    margin-top: 20px;
-    background-color: #811010;
-    color: white;
-    padding: 15px 60px;
-    border: none;
-    cursor: pointer;
-    font-family: "IM Fell Double Pica SC", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 25px;
-    font-style: normal;
-    border-radius: 10px;
-}
-
-button:hover { /* När man hover över button */
-    background-color: #f9f9f9;
-    color: #1f1f20;
-    border-radius: 10px;
-}
-
-/* Styling för själva popup-formuläret */
-#popup-form {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 450px;
-    height: 400px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 5px;
-    z-index: 2;
-    text-align: center;
-}
-
-.form-li {
-    display: block;
-    list-style: none;
-    text-align: left;
-    padding-left: 75px;
-    padding-bottom: 20px;
-    margin: 0 auto;
-    font-size: 16px; /* Fixa typsnitt */
-}
-
-.form-ul {
-    list-style-type: none;
-    text-align: center;
-}
-
-.tillkontakt {
-    grid-area: five;
-}
-
-/* Handling sidan */
-.affisch {
-    grid-area: one;
-}
-
-.filmtext {
-    grid-area: two;
-}
-
-.cardtitel {
-    grid-area: three;
-}
-
-.cardone { /* Första raden kort */
-    grid-area: seven eight nine;
-}
-
-.cardtwo { /* Andra rade kort */
-    grid-area: ten eleven twelve;
-}
-
-.card { /* Själva korten */
-    position: relative;
-    width: 400px;
-    height: 300px;
-    background-color: #f2f2f2;
-    border-radius: 10px;
-    display: flex;
-    align-items: center; /* This will center the image vertically */
-    justify-content: center; /* This will center the image horizontally */
-    overflow: hidden;
-    perspective: 1000px;
-    box-shadow: 0 0 0 5px #ffffff80;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-/* Kontaktsidan */
-.kontakttitel {
-    grid-area: one;
-}
-
-.kontakt {
-    grid-area: two;
-}
-
-/* All text-styling */
-
-.titel { /* Titel styling med shadow, används på */
-    text-align: center;
-    font-family: "IM Fell Double Pica SC", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 50px;
-    text-shadow: 
-    0 0 10px #811010, 
-    0 0 20px #811010,
-    0 0 30px #811010, 
-    0 0 40px #811010, 
-    0 0 70px #811010, 
-    0 0 80px #811010, 
-    0 0 100px #811010, 
-    0 0 150px #811010;
-}
-
-p, h1, h2 {
-    text-align: center;
-}
-
-
-
-
-
-
-
-HELENAS NYA: 
-@charset "UTF-8";
-/* CSS Document */
-
-#layout { 
+#layout3 { 
     min-width: 100%;
     background-color: #1F1D20;
     min-height: 100%;
@@ -386,6 +34,53 @@ HELENAS NYA:
     "card1 card2 card3"
     "card4 card5 card6"
     "footer footer footer"; }
+
+
+/* Countdown */
+.one {
+    grid-area: one;
+    background-color: #1f1d20;
+    color: #f7f0f0;
+}
+/* Filmposter */
+.two {
+    grid-area: two;
+    background-color: #1f1f20;
+    text-align: center;
+    color: white;
+}
+/* Boka biljett */
+.three {
+    grid-area: three;
+    background-color: #1f1f20;
+    text-align: center;
+}
+/* Strömmen titel */
+.four {
+    grid-area: four;
+    background-color: #1f1f20;
+    text-align: center;
+}
+.five {
+    grid-area: five;
+    background-color: #1f1f20;
+    align-items: center;
+}
+.countdown { 
+    display: flex; 
+    justify-content: space-around; 
+    text-align: center; 
+    margin-bottom: 40%; 
+}      
+.day, 
+.hour, 
+.minute, 
+.second { 
+    font-size: 3rem; 
+}       
+.waiting { 
+    height: 50vh; 
+} 
 #header { 
     grid-area: header;
     width: 100%;
@@ -482,508 +177,663 @@ HELENAS NYA:
     
     } 
     }
-    #affisch { 
-        grid-area: affisch;
-        background-color: #1F1D20;
-        img { 
-            height: 500px ;
-            justify-content: left;
-            padding: 20px;
-        }
-    }
-    #text{ 
+#text{ 
         grid-area: text;
         padding: 40px;
         color: #F7F0F0;
     
     }
-    #line { 
-        grid-area: line;
-        justify-content: center;
-        color: #F7F0F0;
-        font-size: 50px;
-    }
-    #card1 { 
-        grid-area: card1;
-        .card {
-            position: relative;
-            width: 400px;
-            height: 300px;
-            background-color: #f2f2f2;
-            border-radius: 10px;
-            display: flex;
-            align-items: center; /* This will center the image vertically */
-            justify-content: center; /* This will center the image horizontally */
-            overflow: hidden;
-            perspective: 1000px;
-            box-shadow: 0 0 0 5px #ffffff80;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-          
-          .card img {
-            width: 380px;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-          }
-          .card img {
-            width: 500px;
-            padding-right: 50px;
-            padding-top:0px ;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            z-index: 1; /* This will place the image above the card content */
-        }
-        
-        .card__content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            padding: 20px;
-            box-sizing: border-box;
-            background-color: #f2f2f2;
-            transform: rotateX(-90deg);
-            transform-origin: bottom;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            z-index: 2; /* This will place the card content above the image */
-        }
-          .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-          }
-          
-          .card:hover .card__content {
-            transform: rotateX(0deg);
-          }
-          
-          .card__title {
-            margin: 0;
-            font-size: 24px;
-            color: #333;
-            font-weight: 700;
-          }
-          
-          .card:hover svg {
-            scale: 0;
-          }
-          
-          .card__description {
-            margin: 10px 0 0;
-            font-size: 14px;
-            color: #777;
-            line-height: 1.4;
-          }
-    }
-    #card2 { 
-        grid-area: card2;
-        .card {
-            position: relative;
-            width: 400px;
-            height: 300px;
-            background-color: #f2f2f2;
-            border-radius: 10px;
-            display: flex;
-            align-items: center; /* This will center the image vertically */
-            justify-content: center; /* This will center the image horizontally */
-            overflow: hidden;
-            perspective: 1000px;
-            box-shadow: 0 0 0 5px #ffffff80;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-          
-          .card img {
-            width: 380px;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-          }
-          .card img {
-            width: 500px;
-            padding-right: 50px;
-            padding-top:0px ;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            z-index: 1; /* This will place the image above the card content */
-        }
-        
-        .card__content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            padding: 20px;
-            box-sizing: border-box;
-            background-color: #f2f2f2;
-            transform: rotateX(-90deg);
-            transform-origin: bottom;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            z-index: 2; /* This will place the card content above the image */
-        }
-          .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-          }
-          
-          .card:hover .card__content {
-            transform: rotateX(0deg);
-          }
-          
-          .card__title {
-            margin: 0;
-            font-size: 24px;
-            color: #333;
-            font-weight: 700;
-          }
-          
-          .card:hover svg {
-            scale: 0;
-          }
-          
-          .card__description {
-            margin: 10px 0 0;
-            font-size: 14px;
-            color: #777;
-            line-height: 1.4;
-          }
-    }
-    #card3 { 
-        grid-area: card3;
-        .card {
-            position: relative;
-            width: 400px;
-            height: 300px;
-            background-color: #f2f2f2;
-            border-radius: 10px;
-            display: flex;
-            align-items: center; /* This will center the image vertically */
-            justify-content: center; /* This will center the image horizontally */
-            overflow: hidden;
-            perspective: 1000px;
-            box-shadow: 0 0 0 5px #ffffff80;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-          
-          .card img {
-            width: 380px;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-          }
-          .card img {
-            width: 500px;
-            padding-right: 50px;
-            padding-top:0px ;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            z-index: 1; /* This will place the image above the card content */
-        }
-        
-        .card__content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            padding: 20px;
-            box-sizing: border-box;
-            background-color: #f2f2f2;
-            transform: rotateX(-90deg);
-            transform-origin: bottom;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            z-index: 2; /* This will place the card content above the image */
-        }
-          .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-          }
-          
-          .card:hover .card__content {
-            transform: rotateX(0deg);
-          }
-          
-          .card__title {
-            margin: 0;
-            font-size: 24px;
-            color: #333;
-            font-weight: 700;
-          }
-          
-          .card:hover svg {
-            scale: 0;
-          }
-          
-          .card__description {
-            margin: 10px 0 0;
-            font-size: 14px;
-            color: #777;
-            line-height: 1.4;
-          }
-    }
-    #card4 { 
-        grid-area: card4;
-        .card {
-            position: relative;
-            width: 400px;
-            height: 300px;
-            background-color: #f2f2f2;
-            border-radius: 10px;
-            display: flex;
-            align-items: center; /* This will center the image vertically */
-            justify-content: center; /* This will center the image horizontally */
-            overflow: hidden;
-            perspective: 1000px;
-            box-shadow: 0 0 0 5px #ffffff80;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-          
-          .card img {
-            width: 380px;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-          }
-          .card img {
-            width: 500px;
-            padding-right: 50px;
-            padding-top:0px ;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            z-index: 1; /* This will place the image above the card content */
-        }
-        
-        .card__content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            padding: 20px;
-            box-sizing: border-box;
-            background-color: #f2f2f2;
-            transform: rotateX(-90deg);
-            transform-origin: bottom;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            z-index: 2; /* This will place the card content above the image */
-        }
-          .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-          }
-          
-          .card:hover .card__content {
-            transform: rotateX(0deg);
-          }
-          
-          .card__title {
-            margin: 0;
-            font-size: 24px;
-            color: #333;
-            font-weight: 700;
-          }
-          
-          .card:hover svg {
-            scale: 0;
-          }
-          
-          .card__description {
-            margin: 10px 0 0;
-            font-size: 14px;
-            color: #777;
-            line-height: 1.4;
-          }
-    }
-    #card5 { 
-        grid-area: card5;
-        .card {
-            position: relative;
-            width: 400px;
-            height: 300px;
-            background-color: #f2f2f2;
-            border-radius: 10px;
-            display: flex;
-            align-items: center; /* This will center the image vertically */
-            justify-content: center; /* This will center the image horizontally */
-            overflow: hidden;
-            perspective: 1000px;
-            box-shadow: 0 0 0 5px #ffffff80;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-          
-          .card img {
-            width: 380px;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-          }
-          .card img {
-            width: 500px;
-            padding-right: 50px;
-            padding-top:0px ;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            z-index: 1; /* This will place the image above the card content */
-        }
-        
-        .card__content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            padding: 20px;
-            box-sizing: border-box;
-            background-color: #f2f2f2;
-            transform: rotateX(-90deg);
-            transform-origin: bottom;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            z-index: 2; /* This will place the card content above the image */
-        }
-          .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-          }
-          
-          .card:hover .card__content {
-            transform: rotateX(0deg);
-          }
-          
-          .card__title {
-            margin: 0;
-            font-size: 24px;
-            color: #333;
-            font-weight: 700;
-          }
-          
-          .card:hover svg {
-            scale: 0;
-          }
-          
-          .card__description {
-            margin: 10px 0 0;
-            font-size: 14px;
-            color: #777;
-            line-height: 1.4;
-          }
-    }
-    #card6 { 
-        grid-area: card6;
-        .card {
-            position: relative;
-            width: 400px;
-            height: 300px;
-            background-color: #f2f2f2;
-            border-radius: 10px;
-            display: flex;
-            align-items: center; /* This will center the image vertically */
-            justify-content: center; /* This will center the image horizontally */
-            overflow: hidden;
-            perspective: 1000px;
-            box-shadow: 0 0 0 5px #ffffff80;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-          
-          .card img {
-            width: 380px;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-          }
-          .card img {
-            width: 500px;
-            padding-right: 50px;
-            padding-top:0px ;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            z-index: 1; /* This will place the image above the card content */
-        }
-        
-        .card__content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            padding: 20px;
-            box-sizing: border-box;
-            background-color: #f2f2f2;
-            transform: rotateX(-90deg);
-            transform-origin: bottom;
-            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            z-index: 2; /* This will place the card content above the image */
-        }
-          .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-          }
-          
-          .card:hover .card__content {
-            transform: rotateX(0deg);
-          }
-          
-          .card__title {
-            margin: 0;
-            font-size: 24px;
-            color: #333;
-            font-weight: 700;
-          }
-          
-          .card:hover svg {
-            scale: 0;
-          }
-          
-          .card__description {
-            margin: 10px 0 0;
-            font-size: 14px;
-            color: #777;
-            line-height: 1.4;
-          }
-    }
-    #footer{ 
-        grid-area: footer;
-        width: 100%;
-        background-color: #811010;
-        .footer { 
-    
-            grid-area: footer; 
-        
-            background-color: #811010; 
-        
-            color: white; 
-        
-        } 
-        
-         
-        
-        p { 
-        
-            padding-left: 20px; 
-        
-            padding-right: 20px; 
-        
-            font-family: "IM Fell Double Pica SC", serif; 
-        
-            font-weight: 400; 
-        
-            font-style: normal; 
-        
-            font-size: 20px; 
-        
-            color: #F7F0F0; 
-        
-            text-align: center; 
-        
-        } 
-    }
-@media (max-width: 1200px) {
-#layout {
-        width: 100%;
-        grid-template-rows: 70px 600px auto repeat(7, 350px) 70px; /* Changed 300px to auto */
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "header"
-            "affisch"
-            "text"
-            "line"
-            "card1"
-            "card2"
-            "card3"
-            "card4"
-            "card5"
-            "card6"
-            "footer";
-}
-#affisch, #text, #card1, #card2, #card3, #card4, #card5, #card6 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap; /* Add this to allow the items to wrap if they can't fit */
-}} 
-
-.body{ 
+#affisch { 
+    grid-area: affisch;
     background-color: #1F1D20;
+    img { 
+        height: 500px ;
+        justify-content: left;
+        padding: 20px;
+    }
+}
+#line { 
+    grid-area: line;
+    justify-content: center;
+    color: #F7F0F0;
+    font-size: 50px;
+}
+#card1 { 
+    grid-area: card1;
+    .card {
+        position: relative;
+        width: 400px;
+        height: 300px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+        display: flex;
+        align-items: center; /* This will center the image vertically */
+        justify-content: center; /* This will center the image horizontally */
+        overflow: hidden;
+        perspective: 1000px;
+        box-shadow: 0 0 0 5px #ffffff80;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+      
+      .card img {
+        width: 380px;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .card img {
+        width: 500px;
+        padding-right: 50px;
+        padding-top:0px ;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 1; /* This will place the image above the card content */
+    }
+    
+    .card__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #f2f2f2;
+        transform: rotateX(-90deg);
+        transform-origin: bottom;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 2; /* This will place the card content above the image */
+    }
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+      }
+      
+      .card:hover .card__content {
+        transform: rotateX(0deg);
+      }
+      
+      .card__title {
+        margin: 0;
+        font-size: 24px;
+        color: #333;
+        font-weight: 700;
+      }
+      
+      .card:hover svg {
+        scale: 0;
+      }
+      
+      .card__description {
+        margin: 10px 0 0;
+        font-size: 14px;
+        color: #777;
+        line-height: 1.4;
+      }
+}
+#card2 { 
+    grid-area: card2;
+    .card {
+        position: relative;
+        width: 400px;
+        height: 300px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+        display: flex;
+        align-items: center; /* This will center the image vertically */
+        justify-content: center; /* This will center the image horizontally */
+        overflow: hidden;
+        perspective: 1000px;
+        box-shadow: 0 0 0 5px #ffffff80;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+      
+      .card img {
+        width: 380px;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .card img {
+        width: 500px;
+        padding-right: 50px;
+        padding-top:0px ;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 1; /* This will place the image above the card content */
+    }
+    
+    .card__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #f2f2f2;
+        transform: rotateX(-90deg);
+        transform-origin: bottom;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 2; /* This will place the card content above the image */
+    }
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+      }
+      
+      .card:hover .card__content {
+        transform: rotateX(0deg);
+      }
+      
+      .card__title {
+        margin: 0;
+        font-size: 24px;
+        color: #333;
+        font-weight: 700;
+      }
+      
+      .card:hover svg {
+        scale: 0;
+      }
+      
+      .card__description {
+        margin: 10px 0 0;
+        font-size: 14px;
+        color: #777;
+        line-height: 1.4;
+      }
+}
+#card3 { 
+    grid-area: card3;
+    .card {
+        position: relative;
+        width: 400px;
+        height: 300px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+        display: flex;
+        align-items: center; /* This will center the image vertically */
+        justify-content: center; /* This will center the image horizontally */
+        overflow: hidden;
+        perspective: 1000px;
+        box-shadow: 0 0 0 5px #ffffff80;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+      
+      .card img {
+        width: 380px;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .card img {
+        width: 500px;
+        padding-right: 50px;
+        padding-top:0px ;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 1; /* This will place the image above the card content */
+    }
+    
+    .card__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #f2f2f2;
+        transform: rotateX(-90deg);
+        transform-origin: bottom;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 2; /* This will place the card content above the image */
+    }
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+      }
+      
+      .card:hover .card__content {
+        transform: rotateX(0deg);
+      }
+      
+      .card__title {
+        margin: 0;
+        font-size: 24px;
+        color: #333;
+        font-weight: 700;
+      }
+      
+      .card:hover svg {
+        scale: 0;
+      }
+      
+      .card__description {
+        margin: 10px 0 0;
+        font-size: 14px;
+        color: #777;
+        line-height: 1.4;
+      }
+}
+#card4 { 
+    grid-area: card4;
+    .card {
+        position: relative;
+        width: 400px;
+        height: 300px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+        display: flex;
+        align-items: center; /* This will center the image vertically */
+        justify-content: center; /* This will center the image horizontally */
+        overflow: hidden;
+        perspective: 1000px;
+        box-shadow: 0 0 0 5px #ffffff80;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+      
+      .card img {
+        width: 380px;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .card img {
+        width: 500px;
+        padding-right: 50px;
+        padding-top:0px ;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 1; /* This will place the image above the card content */
+    }
+    
+    .card__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #f2f2f2;
+        transform: rotateX(-90deg);
+        transform-origin: bottom;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 2; /* This will place the card content above the image */
+    }
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+      }
+      
+      .card:hover .card__content {
+        transform: rotateX(0deg);
+      }
+      
+      .card__title {
+        margin: 0;
+        font-size: 24px;
+        color: #333;
+        font-weight: 700;
+      }
+      
+      .card:hover svg {
+        scale: 0;
+      }
+      
+      .card__description {
+        margin: 10px 0 0;
+        font-size: 14px;
+        color: #777;
+        line-height: 1.4;
+      }
+}
+#card5 { 
+    grid-area: card5;
+    .card {
+        position: relative;
+        width: 400px;
+        height: 300px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+        display: flex;
+        align-items: center; /* This will center the image vertically */
+        justify-content: center; /* This will center the image horizontally */
+        overflow: hidden;
+        perspective: 1000px;
+        box-shadow: 0 0 0 5px #ffffff80;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+      
+      .card img {
+        width: 380px;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .card img {
+        width: 500px;
+        padding-right: 50px;
+        padding-top:0px ;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 1; /* This will place the image above the card content */
+    }
+    
+    .card__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #f2f2f2;
+        transform: rotateX(-90deg);
+        transform-origin: bottom;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 2; /* This will place the card content above the image */
+    }
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+      }
+      
+      .card:hover .card__content {
+        transform: rotateX(0deg);
+      }
+      
+      .card__title {
+        margin: 0;
+        font-size: 24px;
+        color: #333;
+        font-weight: 700;
+      }
+      
+      .card:hover svg {
+        scale: 0;
+      }
+      
+      .card__description {
+        margin: 10px 0 0;
+        font-size: 14px;
+        color: #777;
+        line-height: 1.4;
+      }
+}
+#card6 { 
+    grid-area: card6;
+    .card {
+        position: relative;
+        width: 400px;
+        height: 300px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+        display: flex;
+        align-items: center; /* This will center the image vertically */
+        justify-content: center; /* This will center the image horizontally */
+        overflow: hidden;
+        perspective: 1000px;
+        box-shadow: 0 0 0 5px #ffffff80;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+      
+      .card img {
+        width: 380px;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .card img {
+        width: 500px;
+        padding-right: 50px;
+        padding-top:0px ;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 1; /* This will place the image above the card content */
+    }
+    
+    .card__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #f2f2f2;
+        transform: rotateX(-90deg);
+        transform-origin: bottom;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 2; /* This will place the card content above the image */
+    }
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+      }
+      
+      .card:hover .card__content {
+        transform: rotateX(0deg);
+      }
+      
+      .card__title {
+        margin: 0;
+        font-size: 24px;
+        color: #333;
+        font-weight: 700;
+      }
+      
+      .card:hover svg {
+        scale: 0;
+      }
+      
+      .card__description {
+        margin: 10px 0 0;
+        font-size: 14px;
+        color: #777;
+        line-height: 1.4;
+      }
+}
+#footer{ 
+    grid-area: footer;
+    width: 100%;
+    background-color: #811010;
+    .footer { 
+
+        grid-area: footer; 
+    
+        background-color: #811010; 
+    
+        color: white; 
+    
+    } 
+    
+     
+    
+    p { 
+    
+        padding-left: 20px; 
+    
+        padding-right: 20px; 
+    
+        font-family: "IM Fell Double Pica SC", serif; 
+    
+        font-weight: 400; 
+    
+        font-style: normal; 
+    
+        font-size: 20px; 
+    
+        color: #F7F0F0; 
+    
+        text-align: center; 
+    
+    } 
+}
+/* Knappen och det till forms */
+.open-button {
+    margin-top: 20px;
+    background-color: #811010;
+    color: white;
+    padding: 15px 60px;
+    border: none;
+    cursor: pointer;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    font-style: normal;
+    border-radius: 10px;
+}
+button:hover {
+    background-color: #f9f9f9;
+    color: #1f1f20;
+    border-radius: 10px;
+}
+/* Styling för själva popup-formuläret */
+#popup-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 400px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    z-index: 2;
+    text-align: center;
+}
+.form-li {
+    display: block;
+    list-style: none;
+    text-align: left;
+    padding-left: 75px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    font-family: "Yantramanav", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+}
+.form-ul {
+    list-style-type: none;
+    text-align: center;
+    font-family: "Yantramanav", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+}
+/* Styling för stäng-knappen (X) */
+#close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #1f1f20;
+}
+/* Styling för avsluta-knappen */
+#submit-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #69008F;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1200px) {
+.layout2 { 
+    width:100%; 
+    grid-template-rows: 70px 300px 450px 650px 100px 100px 70px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    'header'
+    'one'
+    'two'
+    'three'
+    'four'
+    'five'
+    'footer';
+}
+#layout3{
+            width: 100%;
+            grid-template-rows: 70px 600px auto repeat(7, 350px) 70px; /* Changed 300px to auto */
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "header"
+                "affisch"
+                "text"
+                "line"
+                "card1"
+                "card2"
+                "card3"
+                "card4"
+                "card5"
+                "card6"
+                "footer";
+    }
+#affisch, #text, #card1, #card2, #card3, #card4, #card5, #card6 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; /* Add this to allow the items to wrap if they can't fit */
+    }} 
+    
+
+
+
+
+
+
+
+/* All typ av text */
+h2 {
+    text-align: center;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+}
+
+h3 {
+    color: #F7F0F0;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    margin-top: 8px;
+}
+
+p {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #F7F0F0;
+    text-align: center;
+}
+
+.beskrivning {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #F7F0F0;
+    text-align: center;
+    line-height: 30px;
+}
+
+.titel {
+    text-align: center;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    text-shadow: 
+    0 0 10px #811010, 
+    0 0 20px #811010,
+    0 0 30px #811010, 
+    0 0 40px #811010, 
+    0 0 70px #811010, 
+    0 0 80px #811010, 
+    0 0 100px #811010, 
+    0 0 150px #811010;
 }
