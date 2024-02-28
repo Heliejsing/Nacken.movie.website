@@ -1,36 +1,94 @@
+/* Kontaktsidan */
 .layout4 {
   display: grid; 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 1fr;
   overflow-x: hidden;
   min-height: 100vh; /* Footern sitter längst ner */
-  grid-template-rows: 70px repeat(4, auto) 70px;
+  grid-template-rows: 70px repeat(7, auto) 70px;
   grid-template-areas:
-  'header header header'
-  'rubrik text text'
-  'adress ad ad'
-  'tel telefon telefon'
-  'epost post post'
-  'footer footer footer';
+  'header header'
+  'rubrik text'
+  'adress ad '
+  'tel telefon'
+  'epost post'
+  'space space'
+  'space space'
+  'space space'
+  'footer footer';
 }
 
-.rubrik {
+/* Kontaktsidan */
+
+   .rubrik {
     grid-area: rubrik;
     margin-left: 20%;
+    color:#F7F0F0;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
    }
 
    .adress {
     grid-area: adress;
- margin-left: 20%;
+    margin-left: 20%;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
    }
 
 
    .tel {
     grid-area: tel;
     margin-left: 20%;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
    }
 
    .epost {
     grid-area: epost;
     margin-left: 20%;
+    font-family: "IM Fell Double Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
    }
 
+   .adress a, .tel a, .epost a {
+    text-decoration: none; 
+    color: #f7f0f0; 
+    text-transform: none; 
+    transition: 0.25s ease; 
+}
+
+.adress a:hover, .tel a:hover, .epost a:hover {
+    color: #f7f0f0; 
+    text-shadow: 
+    0 0 7px #F7F0F0, 
+    0 0 15px #F7F0F0, 
+    0 0 25px #F7F0F0, 
+    0 0 42px #F7F0F0, 
+    0 0 82px #F7F0F0, 
+    0 0 92px #F7F0F0, 
+    0 0 110px #F7F0F0, 
+    0 0 130px #F7F0F0; 
+}
+
+@media (max-width: 600px) {
+  .layout4 {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      'header'
+      'rubrik'
+      'adress'
+      'tel'
+      'epost'
+      'space'
+      'space'
+      'space'
+      'footer';
+  }
+}
