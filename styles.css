@@ -1,1 +1,36 @@
+.layout4 {
+  display: grid; 
+  grid-template-columns: 1fr 1fr;
+  overflow-x: hidden;
+  min-height: 100vh; /* Footern sitter längst ner */
+  grid-template-rows: 70px repeat(4, auto) 70px;
+  grid-template-areas:
+  'header header header'
+  'rubrik text text'
+  'adress ad ad'
+  'tel telefon telefon'
+  'epost post post'
+  'footer footer footer';
+}
+
+.rubrik {
+    grid-area: rubrik;
+    margin-left: 20%;
+   }
+
+   .adress {
+    grid-area: adress;
+ margin-left: 20%;
+   }
+
+
+   .tel {
+    grid-area: tel;
+    margin-left: 20%;
+   }
+
+   .epost {
+    grid-area: epost;
+    margin-left: 20%;
+   }
 
