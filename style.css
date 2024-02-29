@@ -904,7 +904,9 @@ p:hover a {
   font-style: normal;
   font-size: 20px;
  }
-
+.img { 
+  width:500px
+}
  .epost {
   grid-area: epost;
   margin-left: 20%;
@@ -1078,7 +1080,4 @@ h5 {
   font-size: 20px;
   margin-bottom: 20px;
 }
-
-
-
 
